@@ -1,5 +1,7 @@
-<h3 class="title">Personajes</h3>
+<h3>Personajes</h3>
 <hr>
-<ul *ngFor="let personaje of personajes">
-    <li>{{personaje.nombre}} - {{personaje.poder | number}}</li>
+<ul>
+    <li *ngFor="let personaje of personajes">
+        {{ personaje.nombre }} - {{ personaje.poder | number }}
+    </li>
 </ul>

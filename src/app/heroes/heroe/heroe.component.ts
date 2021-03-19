@@ -1,27 +1,29 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'heroe-component',
-    templateUrl:'heroe.component.html'
+    selector: 'app-heroe',
+    templateUrl: 'heroe.component.html'
 })
+export class HeroeComponent{ 
 
-export class HeroeComponent{
-    nombre:string = 'Ironamn';
-    edad:number = 45;
+    nombre: string = 'Ironman';
+    edad  : number = 45
 
-    get nombreCapitalizado(){
+    get nombreCapitalizado(): string {
         return this.nombre.toUpperCase();
     }
 
-    obtenerNombre():string{
-        return `${this.nombre} - ${this.edad}`;
+    obtenerNombre(): string {
+        return `${ this.nombre } - ${ this.edad }`;
     }
 
-    cambiarNombre():void{
+    cambiarNombre():void {
         this.nombre = 'Spiderman';
     }
 
-    cambiarEdad():number{
-        return this.edad = 70;
+    cambiarEdad(): void {
+        console.log('hey...');
+        this.edad = 30;
     }
+
 }
